@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:codigo6_ui/widgets/item_slider_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,6 +12,9 @@ class Example1Page extends StatelessWidget {
     print(MediaQuery.of(context).size.width);
 
     double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    // print(Platform.isAndroid);
 
     return Scaffold(
       body: Column(
@@ -133,14 +140,14 @@ class Example1Page extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(22.0),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Parking near you",
+                      "Parking Near You",
                       style: GoogleFonts.poppins(
                         fontSize: 19.0,
                         color: Color(0xff00162D),
@@ -168,6 +175,9 @@ class Example1Page extends StatelessWidget {
                     ),
                   ],
                 ),
+                ItemSliderWidget(),
+                ItemSliderWidget(),
+                ItemSliderWidget(),
               ],
             ),
           ),
