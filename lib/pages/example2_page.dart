@@ -81,13 +81,15 @@ class Example2Page extends StatelessWidget {
                 ],
               ),
               Container(
-                decoration: BoxDecoration(boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.04),
-                    blurRadius: 12,
-                    offset: const Offset(4, 4),
-                  ),
-                ]),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.04),
+                      blurRadius: 12,
+                      offset: const Offset(4, 4),
+                    ),
+                  ],
+                ),
                 child: TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -95,6 +97,10 @@ class Example2Page extends StatelessWidget {
                     hintText: "Search",
                     suffixIcon: Icon(
                       Icons.search,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 18,
+                      vertical: 14.0,
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(14.0),
