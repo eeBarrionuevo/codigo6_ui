@@ -80,21 +80,30 @@ class Example2Page extends StatelessWidget {
                   ),
                 ],
               ),
-              TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white,
-                  hintText: "Search",
-                  suffixIcon: Icon(
-                    Icons.search,
+              Container(
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.04),
+                    blurRadius: 12,
+                    offset: const Offset(4, 4),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14.0),
-                    borderSide: BorderSide.none,
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14.0),
-                    borderSide: BorderSide.none,
+                ]),
+                child: TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: "Search",
+                    suffixIcon: Icon(
+                      Icons.search,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14.0),
+                      borderSide: BorderSide.none,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(14.0),
+                      borderSide: BorderSide.none,
+                    ),
                   ),
                 ),
               ),
