@@ -8,6 +8,7 @@ class ItemSliderWidget extends StatelessWidget {
 
     return Container(
       // color: Colors.amber,
+      margin: const EdgeInsets.only(right: 16.0),
       constraints: BoxConstraints(
         maxWidth: width * 0.38,
       ),
