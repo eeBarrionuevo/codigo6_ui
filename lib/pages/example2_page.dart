@@ -1,4 +1,6 @@
+import 'package:codigo6_ui/widgets/item_category_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Example2Page extends StatelessWidget {
   @override
@@ -9,6 +11,7 @@ class Example2Page extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -80,6 +83,9 @@ class Example2Page extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 24.0,
+              ),
               Container(
                 decoration: BoxDecoration(
                   boxShadow: [
@@ -111,6 +117,38 @@ class Example2Page extends StatelessWidget {
                       borderSide: BorderSide.none,
                     ),
                   ),
+                ),
+              ),
+              const SizedBox(
+                height: 24.0,
+              ),
+              const Text(
+                "Category",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ItemCategoryWidget(
+                      icon: "home",
+                      text: "House",
+                      isSelected: false,
+                    ),
+                    ItemCategoryWidget(
+                      icon: "city",
+                      text: "Hotel",
+                      isSelected: true,
+                    ),
+                    ItemCategoryWidget(
+                      icon: "house",
+                      text: "Apartment",
+                      isSelected: false,
+                    ),
+                  ],
                 ),
               ),
             ],
