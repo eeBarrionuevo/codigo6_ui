@@ -168,10 +168,20 @@ class Example2Page extends StatelessWidget {
                 ),
               ),
               Container(
-                color: Colors.blue,
-                padding: EdgeInsets.all(12.0),
+                padding: EdgeInsets.all(14.0),
                 constraints: BoxConstraints(
                   maxWidth: width * 0.6,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.04),
+                      blurRadius: 12,
+                      offset: const Offset(4, 4),
+                    ),
+                  ],
                 ),
                 child: Column(
                   children: [
@@ -191,22 +201,91 @@ class Example2Page extends StatelessWidget {
                     ),
 
                     //Título y puntuación
-
+                    const SizedBox(
+                      height: 14.0,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "Minimalist House",
+                        const Expanded(
+                          child: Text(
+                            "Minimalist House",
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.w600,
+                              height: 1.2,
+                            ),
+                          ),
                         ),
                         Row(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.star,
+                              size: 16.0,
+                              color: Colors.amber,
                             ),
                             Text(
                               "4.5",
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ],
+                        ),
+                      ],
+                    ),
+
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    "\$734",
+                                  ),
+                                  Text(
+                                    "/Month",
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on,
+                                    size: 14.0,
+                                  ),
+                                  Expanded(
+                                    child: Text(
+                                      "Padamara, Jawa Tengah",
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                        height: 1.1,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.all(6.0),
+                          decoration: BoxDecoration(
+                            color: Color(0xffF8F8F8),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Icon(
+                            Icons.bookmark_rounded,
+                            color: Color(0xff89909A),
+                          ),
                         ),
                       ],
                     ),
