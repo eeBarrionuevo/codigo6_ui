@@ -5,6 +5,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 class Example2Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Color(0xffF9FBFC),
       body: SafeArea(
@@ -129,6 +132,9 @@ class Example2Page extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
+              const SizedBox(
+                height: 14.0,
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -136,17 +142,73 @@ class Example2Page extends StatelessWidget {
                     ItemCategoryWidget(
                       icon: "home",
                       text: "House",
-                      isSelected: false,
+                      isSelected: true,
                     ),
                     ItemCategoryWidget(
                       icon: "city",
                       text: "Hotel",
-                      isSelected: true,
+                      isSelected: false,
                     ),
                     ItemCategoryWidget(
                       icon: "house",
                       text: "Apartment",
                       isSelected: false,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 24.0,
+              ),
+              const Text(
+                "Recommendation",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(12.0),
+                constraints: BoxConstraints(
+                  maxWidth: width * 0.6,
+                ),
+                child: Column(
+                  children: [
+                    //Imagen principal
+                    Container(
+                      width: width * 0.6,
+                      height: height * 0.2,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16.0),
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    //Título y puntuación
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Minimalist House",
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.star,
+                            ),
+                            Text(
+                              "4.5",
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
