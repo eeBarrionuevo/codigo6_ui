@@ -37,98 +37,141 @@ class Example3Page extends StatelessWidget {
 
           //Formulario
           SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(26.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "reisup",
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xff3EA2A8),
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.w700,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(26.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: height * 0.14,
                     ),
-                  ),
-                  Text(
-                    "You have goals.",
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xff2E303E),
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: -0.9,
-                    ),
-                  ),
-                  Text(
-                    "Invest to achive them.",
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xff2E303E),
-                      fontSize: 24.0,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: -0.9,
-                    ),
-                  ),
-                  TextField(
-                    cursorColor: Color(0xff3EA2A8),
-                    decoration: InputDecoration(
-                      hintText: "Email*",
-                      hintStyle: GoogleFonts.montserrat(
-                        color: Colors.black38,
+                    Text(
+                      "reisup",
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xff3EA2A8),
+                        fontSize: 32.0,
+                        fontWeight: FontWeight.w700,
                       ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xff3EA2A8).withOpacity(0.50),
-                          width: 2.5,
+                    ),
+                    Text(
+                      "You have goals.",
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xff2E303E),
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: -0.9,
+                      ),
+                    ),
+                    Text(
+                      "Invest to achive them.",
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xff2E303E),
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: -0.9,
+                      ),
+                    ),
+                    TextField(
+                      cursorColor: Color(0xff3EA2A8),
+                      decoration: InputDecoration(
+                        hintText: "Email*",
+                        hintStyle: GoogleFonts.montserrat(
+                          color: Colors.black38,
                         ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xff3EA2A8).withOpacity(0.50),
-                          width: 2.5,
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xff3EA2A8).withOpacity(0.50),
+                            width: 2.5,
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                  TextField(
-                    cursorColor: Color(0xff3EA2A8),
-                    decoration: InputDecoration(
-                      hintText: "Password*",
-                      hintStyle: GoogleFonts.montserrat(
-                        color: Colors.black38,
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xff3EA2A8).withOpacity(0.50),
-                          width: 2.5,
-                        ),
-                      ),
-                      focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Color(0xff3EA2A8).withOpacity(0.50),
-                          width: 2.5,
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xff3EA2A8).withOpacity(0.50),
+                            width: 2.5,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 56.0,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text("Log in"),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff2E303E),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14.0),
+                    TextField(
+                      cursorColor: Color(0xff3EA2A8),
+                      decoration: InputDecoration(
+                        hintText: "Password*",
+                        hintStyle: GoogleFonts.montserrat(
+                          color: Colors.black38,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xff3EA2A8).withOpacity(0.50),
+                            width: 2.5,
+                          ),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xff3EA2A8).withOpacity(0.50),
+                            width: 2.5,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: Text("Sign up"),
-                  ),
-                ],
+                    SizedBox(
+                      height: height * 0.06,
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 56.0,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Log in"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff2E303E),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: height * 0.04,
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 56.0,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Sign in"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff3EA2A8),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: height * 0.04,
+                    ),
+                    Text(
+                      "Forgot username or password?",
+                      style: GoogleFonts.montserrat(
+                        fontSize: 15.0,
+                        color: Color(0xff2E303E),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(
+                      height: height * 0.03,
+                    ),
+                    Text(
+                      "By proceding you also agree to the Terms of Service and Privacy Policy",
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14.0,
+                        color: Color(0xff2E303E).withOpacity(0.6),
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
