@@ -1,6 +1,7 @@
 import 'package:codigo6_ui/pages/example1_page.dart';
 import 'package:codigo6_ui/pages/example2_page.dart';
 import 'package:codigo6_ui/pages/example3_page.dart';
+import 'package:codigo6_ui/pages/example4_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: Example3Page(),
+      home: Example4Page(),
     );
   }
 }
