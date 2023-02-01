@@ -44,7 +44,7 @@ class Example3Page extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: height * 0.14,
+                      height: height * 0.13,
                     ),
                     Text(
                       "reisup",
@@ -53,6 +53,9 @@ class Example3Page extends StatelessWidget {
                         fontSize: 32.0,
                         fontWeight: FontWeight.w700,
                       ),
+                    ),
+                    SizedBox(
+                      height: height * 0.03,
                     ),
                     Text(
                       "You have goals.",
@@ -71,6 +74,9 @@ class Example3Page extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                         letterSpacing: -0.9,
                       ),
+                    ),
+                    SizedBox(
+                      height: height * 0.03,
                     ),
                     TextField(
                       cursorColor: Color(0xff3EA2A8),
@@ -92,6 +98,9 @@ class Example3Page extends StatelessWidget {
                           ),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: height * 0.025,
                     ),
                     TextField(
                       cursorColor: Color(0xff3EA2A8),
@@ -151,23 +160,28 @@ class Example3Page extends StatelessWidget {
                     SizedBox(
                       height: height * 0.04,
                     ),
-                    Text(
-                      "Forgot username or password?",
-                      style: GoogleFonts.montserrat(
-                        fontSize: 15.0,
-                        color: Color(0xff2E303E),
-                        fontWeight: FontWeight.w600,
+                    Center(
+                      child: Text(
+                        "Forgot username or password?",
+                        style: GoogleFonts.montserrat(
+                          fontSize: 15.0,
+                          color: Color(0xff2E303E),
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                     SizedBox(
                       height: height * 0.03,
                     ),
-                    Text(
-                      "By proceding you also agree to the Terms of Service and Privacy Policy",
-                      style: GoogleFonts.montserrat(
-                        fontSize: 14.0,
-                        color: Color(0xff2E303E).withOpacity(0.6),
-                        fontWeight: FontWeight.w400,
+                    Center(
+                      child: Text(
+                        "By proceding you also agree to the Terms of Service and Privacy Policy",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14.0,
+                          color: Color(0xff2E303E).withOpacity(0.6),
+                          fontWeight: FontWeight.w400,
+                        ),
                       ),
                     ),
                   ],
